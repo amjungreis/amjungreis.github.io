@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style id="antiClickjack">
+body {
+	display:none !important;
+}
+</style>
+<style>
+#navbarSmall { 
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch; // mobile safari
+}
+</style>
+<script type="text/javascript">
+// Used to prevent iframes attacks
+if (self === top) {
+	var antiClickjack = document.getElementById("antiClickjack");
+	antiClickjack.parentNode.removeChild(antiClickjack);
+}
+else {
+	top.location = self.location;
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleMenu() {
+  var x = document.getElementById("navbarSmall");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-down";
+  }
+  else { 
+    x.className = x.className.replace(" w3-show", "");
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-right";
+  }
+  return false;
+}
+
+// Listen for orientation changes      
+window.addEventListener("orientationchange", function() {
+	location.reload();
+}, false);
+</script>
+<link rel="icon"  type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" type="image/png" href="favicon.png" />
+<meta charset="utf-8" />
+<meta http-equiv="X-Frame-Options" content="deny">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../styles/w3.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Learn Czech Dances, Slovak Dances, and Moravian Dances! - Czechslovakdances.com" />
+<meta property="og:url" content="https://czechslovakdances.com/" />
+<meta property="og:site_name" content="Czechslovakdances.com" />
+<meta property="article:modified_time" content="2022-09-20T11:25:00+00:00" />
+<meta property="og:image" content="https://czechslovakdances.com/images/bookComplete.jpg" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<title>Privacy Policy</title>
+</head>
+<body class="w3-black">
+<!-- Navbar -->
+<div class="w3-top" style="z-index:100">
+	<!-- Navigation for medium and large screens -->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-show w3-large w3-hide-small" style="width:250px;background-color:#c82525;color:#fffac2" id="navBar">
+		<img src="images/navHeader8.gif" alt="The Golden Gate is Open" style="width:250px"><br />
+		<div style="padding-left:8px">
+			<a href="index.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+			<a href="about.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+			<a href="testimonials.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+			<a href="shop.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+			<span class="w3-bar-item w3-padding-small" style="padding-bottom:0"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details</span>
+			<a href="bookVol1.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vol I Only</a>
+			<a href="bookComplete.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vols I,II,III</a>
+			<a href="video.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+			<a href="privacy.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		</div>
+	<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+	<!-- Navbar bar for small screens -->
+	<div id="navbarBar" class="w3-bar w3-card w3-hide-large w3-hide-medium w3-left-align w3-large" style="background-color:#c82525;color:#fffac2">
+		<!-- navigation icon for small screens -->
+		<a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left w3-padding-large w3-hover-white w3-large" style="background-color:#c82525;color:#fffac2" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<!-- Logo on small screens -->
+		<img src="images/bookTitleHorizontal.png" class="w3-hide-large w3-hide-medium" style="height:25px;margin-top:14px">
+	</div>
+	<!-- Navigation on small screens -->
+	<div id="navbarSmall" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+		<a href="index.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+		<a href="about.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+		<a href="testimonials.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+		<a href="bookVol1.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I only</a>
+		<a href="bookComplete.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I,II,III</a>
+		<a href="shop.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+		<a href="video.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+		<a href="privacy.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		<p>&nbsp;</p>
+	</div>
+</div>
+<!-- page text for large screens -->
+<header class="w3-container w3-black w3-hide-medium w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-black">Privacy Policy</h1>
+	<div class="w3-cell-row">
+		<div class="w3-container w3-white w3-padding-large w3-cell w3-cell-top">
+			<div style="column-count:2">
+				<h4>Privacy Statement</h4>
+				We take individual privacy seriously and are also aware of the threats to your security and privacy on the Internet. Please take a few moments to review the steps we take to ensure your privacy and security while giving you the best possible customer service as you use our web site.
+
+				<h4>Ordering Online</h4>
+				All financial data is submitted directly to Paypal and is subject to Paypal's privacy policy and security. Paypal then sends us your contact information (but no financial information) so we can send you the books that you have ordered.
+				<p>We do not sell or rent your name or any of your other contact information to anyone. We may use your name and address to ask for your satisfaction with your order. And, although we disagree with it, we must turn over any pertinent information to any law enforcement agency that takes the proper steps to require it.</p>
+			</div>
+		</div>
+		<div class="w3-container w3-cell w3-cell-top w3-white">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+			<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+		</div>
+	</div>
+</header>
+
+<!-- page text for medium screens -->
+<header class="w3-container w3-black w3-hide-large w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-black">Privacy Policy</h1>
+		<div class="w3-container w3-white">
+			<h4>Privacy Statement</h4>
+			We take individual privacy seriously and are also aware of the threats to your security and privacy on the Internet. Please take a few moments to review the steps we take to ensure your privacy and security while giving you the best possible customer service as you use our web site.
+
+			<h4>Ordering Online</h4>
+			All financial data is submitted directly to Paypal and is subject to Paypal's privacy policy and security. Paypal then sends us your contact information (but no financial information) so we can send you the books that you have ordered.
+			<p>We do not sell or rent your name or any of your other contact information to anyone. We may use your name and address to ask for your satisfaction with your order. And, although we disagree with it, we must turn over any pertinent information to any law enforcement agency that takes the proper steps to require it.</p>
+
+			<div class="w3-center">
+				<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+				<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+			</div>
+		</div>
+</header>
+
+<!-- page text for small screens -->
+<header class="w3-container w3-white w3-hide-large w3-hide-medium" style="padding: 64px 24px">
+	<h1 class="w3-xlarge">Privacy Policy</h1>
+	<div>
+		<div class="w3-white">
+			<h4>Privacy Statement</h4>
+			We take individual privacy seriously and are also aware of the threats to your security and privacy on the Internet. Please take a few moments to review the steps we take to ensure your privacy and security while giving you the best possible customer service as you use our web site.
+
+			<h4>Ordering Online</h4>
+			All financial data is submitted directly to Paypal and is subject to Paypal's privacy policy and security. Paypal then sends us your contact information (but no financial information) so we can send you the books that you have ordered.
+			<p>We do not sell or rent your name or any of your other contact information to anyone. We may use your name and address to ask for your satisfaction with your order. And, although we disagree with it, we must turn over any pertinent information to any law enforcement agency that takes the proper steps to require it.</p>
+
+		</div>
+		<div class="w3-center">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+			<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+		</div>
+		<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+</header>
+</body>
+</html>

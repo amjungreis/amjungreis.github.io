@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style id="antiClickjack">
+body {
+	display:none !important;
+}
+</style>
+<style>
+#navbarSmall { 
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch; // mobile safari
+}
+</style>
+<script type="text/javascript">
+// Used to prevent iframes attacks
+if (self === top) {
+	var antiClickjack = document.getElementById("antiClickjack");
+	antiClickjack.parentNode.removeChild(antiClickjack);
+}
+else {
+	top.location = self.location;
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleMenu() {
+  var x = document.getElementById("navbarSmall");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-down";
+  }
+  else { 
+    x.className = x.className.replace(" w3-show", "");
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-right";
+  }
+  return false;
+}
+
+// Listen for orientation changes      
+window.addEventListener("orientationchange", function() {
+	location.reload();
+}, false);
+</script>
+<link rel="icon"  type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" type="image/png" href="favicon.png" />
+<meta charset="utf-8" />
+<meta http-equiv="X-Frame-Options" content="deny">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../styles/w3.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Learn Czech Dances, Slovak Dances, and Moravian Dances! - Czechslovakdances.com" />
+<meta property="og:url" content="https://czechslovakdances.com/" />
+<meta property="og:site_name" content="Czechslovakdances.com" />
+<meta property="article:modified_time" content="2022-09-20T11:25:00+00:00" />
+<meta property="og:image" content="https://czechslovakdances.com/images/bookComplete.jpg" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<title>Czech Dances</title>
+</head>
+<body class="w3-black">
+<!-- Navbar -->
+<div class="w3-top" style="z-index:100">
+	<!-- Navigation for medium and large screens -->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-show w3-large w3-hide-small" style="width:250px;background-color:#c82525;color:#fffac2" id="navBar">
+		<img src="images/navHeader8.gif" alt="The Golden Gate is Open" style="width:250px"><br />
+		<div style="padding-left:8px">
+			<a href="index.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+			<a href="about.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+			<a href="testimonials.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+			<a href="shop.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+			<span class="w3-bar-item w3-padding-small" style="padding-bottom:0"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details</span>
+			<a href="bookVol1.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vol I Only</a>
+			<a href="bookComplete.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vols I,II,III</a>
+			<a href="video.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+			<a href="privacy.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		</div>
+	<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+	<!-- Navbar bar for small screens -->
+	<div id="navbarBar" class="w3-bar w3-card w3-hide-large w3-hide-medium w3-left-align w3-large" style="background-color:#c82525;color:#fffac2">
+		<!-- navigation icon for small screens -->
+		<a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left w3-padding-large w3-hover-white w3-large" style="background-color:#c82525;color:#fffac2" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<!-- Logo on small screens -->
+		<img src="images/bookTitleHorizontal.png" class="w3-hide-large w3-hide-medium" style="height:25px;margin-top:14px">
+	</div>
+	<!-- Navigation on small screens -->
+	<div id="navbarSmall" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+		<a href="index.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+		<a href="about.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+		<a href="testimonials.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+		<a href="bookVol1.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I only</a>
+		<a href="bookComplete.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I,II,III</a>
+		<a href="shop.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+		<a href="video.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+		<a href="privacy.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		<p>&nbsp;</p>
+	</div>
+</div>
+<!-- page text for large screens -->
+<header class="w3-container w3-black w3-hide-medium w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-black">Learn Czech Dances, Slovak Dances, and Moravian Dances!</h1>
+	<div class="w3-cell-row">
+		<div class="w3-container w3-white w3-padding-large w3-cell w3-cell-top">
+			<div style="column-count:2">
+			<img src="images/bookComplete.jpg" width="180px" class="w3-right">
+			<span class="w3-large">The&nbsp;Czech and Slovak Republics are rich in folk music and dance. The dances in this video and book convey various regional styles, based on field work by the late Prof. František Bonuš of the Academy of Fine Arts in Prague.</span>
+
+			<p>The material is directed to public and private school teachers and college faculty who wish to increase the diversity of their offerings in classes and performances; to leaders of youth and adult folk-dance groups, classes, and camps; and to those who simply want to enjoy the beauty of the music and dances.</p>
+
+			<p>The dances in the books are organized into three volumes: beginning dances for children ages 5-13 and beginning adults, intermediate dances for ages 14-16 and adults, and advanced dances for ages 17 and up. <i>The volume of beginning dances has also been published separately.</i></p>
+
+			<p>The movements and styles of the dances are demonstrated on the <b>included video</b>. The instruction book gives a beat-by-beat description of the movements of the feet, arms, hands, and body—all the information that is necessary to learn and to teach the dances independently. The music is also on <b>two CDs</b> for practice and performance purposes.</p>
+
+			<p>The book also contains <b><i>cultural and historical background</i></b> on the dances, <b><i>seasonal themes</i></b>, a <b><i>musical score</i></b> for each song with a <b><i>singing translation</i></b> of the lyrics, <b><i>suggestions for teaching</i></b>, a <b><i>pronunciation guide</i></b> to the Czech and Slovak languages, a <b><i>glossary</i></b>, and a <b><i>bibliography</i></b>.</p>
+			</div>
+		</div>
+		<div class="w3-container w3-cell w3-cell-top w3-white">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+			<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+		</div>
+	</div>
+</header>
+
+<!-- page text for medium screens -->
+<header class="w3-container w3-black w3-hide-large w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-black">Learn Czech Dances, Slovak Dances, and Moravian Dances!</h1>
+	<div class="w3-container w3-white w3-padding-24">
+		<img src="images/bookComplete.jpg" width="150px" class="w3-right w3-padding">
+		<span class="w3-large">The&nbsp;Czech and Slovak Republics are rich in folk music and dance. The dances in this video and book convey various regional styles, based on field work by the late Prof. František Bonuš of the Academy of Fine Arts in Prague.</span>
+
+		<p>The material is directed to public and private school teachers and college faculty who wish to increase the diversity of their offerings in classes and performances; to leaders of youth and adult folk-dance groups, classes, and camps; and to those who simply want to enjoy the beauty of the music and dances.</p>
+
+		<p>The dances in the books are organized into three volumes: beginning dances for children ages 5-13 and beginning adults, intermediate dances for ages 14-16 and adults, and advanced dances for ages 17 and up. <i>The volume of beginning dances has also been published separately.</i></p>
+
+		<p>The movements and styles of the dances are demonstrated on the <b>included video</b>. The instruction book gives a beat-by-beat description of the movements of the feet, arms, hands, and body—all the information that is necessary to learn and to teach the dances independently. The music is also on <b>two CDs</b> for practice and performance purposes.</p>
+
+		<p>The book also contains <b><i>cultural and historical background</i></b> on the dances, <b><i>seasonal themes</i></b>, a <b><i>musical score</i></b> for each song with a <b><i>singing translation</i></b> of the lyrics, <b><i>suggestions for teaching</i></b>, a <b><i>pronunciation guide</i></b> to the Czech and Slovak languages, a <b><i>glossary</i></b>, and a <b><i>bibliography</i></b>.</p>
+		<div class="w3-center">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+			<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+		</div>
+	</div>
+</header>
+
+<!-- page text for small screens -->
+<header class="w3-container w3-white w3-hide-large w3-hide-medium" style="padding: 64px 24px">
+	<h1 class="w3-xlarge">Learn Czech Dances, Slovak Dances, and Moravian Dances!</h1>
+	<div>
+		<div class="w3-white">
+			<img src="images/bookComplete.jpg" width="100%">
+			<span class="w3-large">The&nbsp;Czech and Slovak Republics are rich in folk music and dance. The dances in this video and book convey various regional styles, based on field work by the late Prof. František Bonuš of the Academy of Fine Arts in Prague.</span>
+
+			<p>The material is directed to public and private school teachers and college faculty who wish to increase the diversity of their offerings in classes and performances; to leaders of youth and adult folk-dance groups, classes, and camps; and to those who simply want to enjoy the beauty of the music and dances.</p>
+
+			<p>The dances in the books are organized into three volumes: beginning dances for children ages 5-13 and beginning adults, intermediate dances for ages 14-16 and adults, and advanced dances for ages 17 and up. <i>The volume of beginning dances has also been published separately.</i></p>
+
+			<p>The movements and styles of the dances are demonstrated on the <b>included video</b>. The instruction book gives a beat-by-beat description of the movements of the feet, arms, hands, and body—all the information that is necessary to learn and to teach the dances independently. The music is also on <b>two CDs</b> for practice and performance purposes.</p>
+
+			<p>The book also contains <b><i>cultural and historical background</i></b> on the dances, <b><i>seasonal themes</i></b>, a <b><i>musical score</i></b> for each song with a <b><i>singing translation</i></b> of the lyrics, <b><i>suggestions for teaching</i></b>, a <b><i>pronunciation guide</i></b> to the Czech and Slovak languages, a <b><i>glossary</i></b>, and a <b><i>bibliography</i></b>.</p>
+		</div>
+		<div class="w3-center">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+			<br /><a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances<br />Beginning through Advanced<br /><img src="images/slides_product.jpg" width="200px" /></a>
+		</div>
+		<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+</header>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style id="antiClickjack">
+body {
+	display:none !important;
+}
+</style>
+<style>
+#navbarSmall { 
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch; // mobile safari
+}
+</style>
+<script type="text/javascript">
+// Used to prevent iframes attacks
+if (self === top) {
+	var antiClickjack = document.getElementById("antiClickjack");
+	antiClickjack.parentNode.removeChild(antiClickjack);
+}
+else {
+	top.location = self.location;
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleMenu() {
+  var x = document.getElementById("navbarSmall");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-down";
+  }
+  else { 
+    x.className = x.className.replace(" w3-show", "");
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-right";
+  }
+  return false;
+}
+
+// Listen for orientation changes      
+window.addEventListener("orientationchange", function() {
+	location.reload();
+}, false);
+</script>
+<link rel="icon"  type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" type="image/png" href="favicon.png" />
+<meta charset="utf-8" />
+<meta http-equiv="X-Frame-Options" content="deny">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../styles/w3.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Learn Czech Dances, Slovak Dances, and Moravian Dances! - Czechslovakdances.com" />
+<meta property="og:url" content="https://czechslovakdances.com/" />
+<meta property="og:site_name" content="Czechslovakdances.com" />
+<meta property="article:modified_time" content="2022-09-20T11:25:00+00:00" />
+<meta property="og:image" content="https://czechslovakdances.com/images/bookComplete.jpg" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<title>store</title>
+</head>
+<body class="w3-white">
+<!-- Navbar -->
+<div class="w3-top" style="z-index:100">
+	<!-- Navigation for medium and large screens -->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-show w3-large w3-hide-small" style="width:250px;background-color:#c82525;color:#fffac2" id="navBar">
+		<img src="images/navHeader8.gif" alt="The Golden Gate is Open" style="width:250px"><br />
+		<div style="padding-left:8px">
+			<a href="index.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+			<a href="about.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+			<a href="testimonials.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+			<a href="shop.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+			<span class="w3-bar-item w3-padding-small" style="padding-bottom:0"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details</span>
+			<a href="bookVol1.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vol I Only</a>
+			<a href="bookComplete.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vols I,II,III</a>
+			<a href="video.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+			<a href="privacy.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		</div>
+	<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+	<!-- Navbar bar for small screens -->
+	<div id="navbarBar" class="w3-bar w3-card w3-hide-large w3-hide-medium w3-left-align w3-large" style="background-color:#c82525;color:#fffac2">
+		<!-- navigation icon for small screens -->
+		<a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left w3-padding-large w3-hover-white w3-large" style="background-color:#c82525;color:#fffac2" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<!-- Logo on small screens -->
+		<img src="images/bookTitleHorizontal.png" class="w3-hide-large w3-hide-medium" style="height:25px;margin-top:14px">
+	</div>
+	<!-- Navigation on small screens -->
+	<div id="navbarSmall" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+		<a href="index.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+		<a href="about.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+		<a href="testimonials.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+		<a href="bookVol1.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I only</a>
+		<a href="bookComplete.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I,II,III</a>
+		<a href="shop.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+		<a href="video.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+		<a href="privacy.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		<p>&nbsp;</p>
+	</div>
+</div>
+<!-- page text for large and medium screens -->
+<header class="w3-container w3-white w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-white">Online Store</h1>
+	<div class="w3-row">
+		<div class="w3-container w3-white w3-col l2 w3-border" style="width:350px">
+			<div class="w3-small">
+				<div class="w3-center">
+					<a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large"><img src="images/bookComplete.jpg" width="150px"></a>
+					<br />
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input name="cmd" value="_s-xclick" type="hidden">
+						<input name="hosted_button_id" value="WF4D24HB5VVJN" type="hidden">
+						<input type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" style="font-weight:bold" class="w3-button w3-round-xlarge w3-yellow w3-hover-black w3-padding" value="Add to Cart" /><p></p>
+					</form>
+				</div>
+				<b>The Golden Gate Is Open: 31 Folk Dances from the Czech and Slovak Republics for Children and Adults, Vols. I, II, III</b><br />
+				by <a href="about.htm" class="w3-hover-red" style="text-decoration:none;color:#0000ff">František Bonuš and Edward J. P. O’Connor</a><p></p>
+				<b>$75.00</b><br />Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $25.00</i><p></p>
+			</div>
+		</div>
+		<div class="w3-container w3-white w3-col l2 w3-border" style="width:350px">
+			<div class="w3-small">
+				<div class="w3-center">
+					<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large"><img src="images/productsVol1.png" width="150px"></a>
+					<br />
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input name="cmd" value="_s-xclick" type="hidden">
+						<input name="hosted_button_id" value="3S6BGWLV6CB3A" type="hidden">
+						<input type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" style="font-weight:bold" class="w3-button w3-round-xlarge w3-yellow w3-hover-black w3-padding" value="Add to Cart" /><p></p>
+					</form>
+				</div>
+				<b>The Golden Gate Is Open: 10 Beginning Folk Dances from the Czech and Slovak Republics for Children and Adults</b><br />
+				by <a href="about.htm" class="w3-hover-red" style="text-decoration:none;color:#0000ff">František Bonuš and Edward J. P. O’Connor</a><p></p>
+				<b>$35.00</b><br />Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $14.50</i><p></p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- page text for small screens -->
+<header class="w3-container w3-white w3-hide-large w3-hide-medium" style="padding: 48px 0px">
+	<h1 class="w3-xlarge w3-padding">Online Store</h1>
+	<div class="w3-row">
+		<div class="w3-container w3-white w3-col l2 w3-border-top w3-border-bottom" style="width:350px">
+			<div class="w3-small">
+				<div class="w3-center">
+					<a href="bookComplete.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large"><img src="images/bookComplete.jpg" width="150px"></a>
+					<br />
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input name="cmd" value="_s-xclick" type="hidden">
+						<input name="hosted_button_id" value="WF4D24HB5VVJN" type="hidden">
+						<input type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" style="font-weight:bold" class="w3-button w3-round-xlarge w3-yellow w3-hover-black w3-padding" value="Add to Cart" /><p></p>
+					</form>
+				</div>
+				<b>The Golden Gate Is Open: 31 Folk Dances from the Czech and Slovak Republics for Children and Adults, Vols. I, II, III</b><br />
+				by <a href="about.htm" class="w3-hover-red" style="text-decoration:none;color:#0000ff">František Bonuš and Edward J. P. O’Connor</a><p></p>
+				<b>$75.00</b><br />Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $25.00</i><p></p>
+			</div>
+		</div>
+		<div class="w3-container w3-white w3-col l2 w3-border-top w3-border-bottom" style="width:350px">
+			<div class="w3-small">
+				<div class="w3-center">
+					<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large"><img src="images/productsVol1.png" width="150px"></a>
+					<br />
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input name="cmd" value="_s-xclick" type="hidden">
+						<input name="hosted_button_id" value="3S6BGWLV6CB3A" type="hidden">
+						<input type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" style="font-weight:bold" class="w3-button w3-round-xlarge w3-yellow w3-hover-black w3-padding" value="Add to Cart" /><p></p>
+					</form>
+				</div>
+				<b>The Golden Gate Is Open: 10 Beginning Folk Dances from the Czech and Slovak Republics for Children and Adults</b><br />
+				by <a href="about.htm" class="w3-hover-red" style="text-decoration:none;color:#0000ff">František Bonuš and Edward J. P. O’Connor</a><p></p>
+				<b>$35.00</b><br />Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $14.50</i><p></p>
+			</div>
+		</div>
+	</div>
+</header>
+</body>
+</html>

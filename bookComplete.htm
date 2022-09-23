@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style id="antiClickjack">
+body {
+	display:none !important;
+}
+</style>
+<style>
+#navbarSmall { 
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch; // mobile safari
+}
+</style>
+<script type="text/javascript">
+// Used to prevent iframes attacks
+if (self === top) {
+	var antiClickjack = document.getElementById("antiClickjack");
+	antiClickjack.parentNode.removeChild(antiClickjack);
+}
+else {
+	top.location = self.location;
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleMenu() {
+  var x = document.getElementById("navbarSmall");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-down";
+  }
+  else { 
+    x.className = x.className.replace(" w3-show", "");
+	document.getElementById(id+'Title').className = "fa fa-caret-square-o-right";
+  }
+  return false;
+}
+
+// Listen for orientation changes      
+window.addEventListener("orientationchange", function() {
+	location.reload();
+}, false);
+</script>
+<link rel="icon"  type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" type="image/png" href="favicon.png" />
+<meta charset="utf-8" />
+<meta http-equiv="X-Frame-Options" content="deny">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../styles/w3.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Learn Czech Dances, Slovak Dances, and Moravian Dances! - Czechslovakdances.com" />
+<meta property="og:url" content="https://czechslovakdances.com/" />
+<meta property="og:site_name" content="Czechslovakdances.com" />
+<meta property="article:modified_time" content="2022-09-20T11:25:00+00:00" />
+<meta property="og:image" content="https://czechslovakdances.com/images/bookComplete.jpg" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<title>Vols 1-3</title>
+</head>
+<body class="w3-black">
+<!-- Navbar -->
+<div class="w3-top" style="z-index:100">
+	<!-- Navigation for medium and large screens -->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-show w3-large w3-hide-small" style="width:250px;background-color:#c82525;color:#fffac2" id="navBar">
+		<img src="images/navHeader8.gif" alt="The Golden Gate is Open" style="width:250px"><br />
+		<div style="padding-left:8px">
+			<a href="index.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+			<a href="about.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+			<a href="testimonials.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+			<a href="shop.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+			<span class="w3-bar-item w3-padding-small" style="padding-bottom:0"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details</span>
+			<a href="bookVol1.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vol I Only</a>
+			<a href="bookComplete.htm" class="w3-bar-item w3-button w3-medium w3-hover-black" style="padding-left:3em;padding-top:0;padding-bottom:0">&nbsp;Vols I,II,III</a>
+			<a href="video.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+			<a href="privacy.htm" class="w3-bar-item w3-padding-small w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		</div>
+	<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+	<!-- Navbar bar for small screens -->
+	<div id="navbarBar" class="w3-bar w3-card w3-hide-large w3-hide-medium w3-left-align w3-large" style="background-color:#c82525;color:#fffac2">
+		<!-- navigation icon for small screens -->
+		<a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left w3-padding-large w3-hover-white w3-large" style="background-color:#c82525;color:#fffac2" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<!-- Logo on small screens -->
+		<img src="images/bookTitleHorizontal.png" class="w3-hide-large w3-hide-medium" style="height:25px;margin-top:14px">
+	</div>
+	<!-- Navigation on small screens -->
+	<div id="navbarSmall" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+		<a href="index.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+		<a href="about.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;About Us</a>
+		<a href="testimonials.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Testimonials</a>
+		<a href="bookVol1.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I only</a>
+		<a href="bookComplete.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book Details - Vol I,II,III</a>
+		<a href="shop.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</a>
+		<a href="video.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Video</a>
+		<a href="privacy.htm" class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Privacy Policy</a>
+		<p>&nbsp;</p>
+	</div>
+</div>
+<!-- page text for large screens -->
+<header class="w3-container w3-black w3-hide-medium w3-hide-small" style="margin-left:250px;padding: 0px 16px">
+	<h1 class="w3-xlarge w3-black">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances, Beginning through Advanced</h1>
+	<div class="w3-cell-row">
+		<div class="w3-container w3-white w3-cell w3-cell-top">
+			<div class="w3-padding-large w3-border-right w3-border-bottom w3-border-black">
+				<h3>The Golden Gate Is Open: 31 Folk Dances from the Czech and Slovak Republics for Children and Adults, Vols. I, II, III</h3>
+				<img src="images/bookComplete.jpg" style="padding-right:24px;padding-bottom:16px;width:50%" class="w3-left">
+				<b>Item #0001<p></p>$75.00</b><p></p>Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $25.00</i><p></p>
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="V5JCV97X2GM9C">
+					<table>
+						<tr><td><input type="hidden" name="on0" value="Price including shipping">Price including shipping</td></tr>
+						<tr><td><select name="os0">
+							<option value="Ship to US address">Ship to US address $79.50 USD</option>
+							<option value="Overseas shipping">Overseas shipping $100.00 USD</option>
+						</select> </td></tr>
+					</table>
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<span class="w3-xlarge">Specifications:</span><br />
+				<b>DVD:</b> length—2&nbsp;hours. Shows all dance movements.<br />
+				<b>Manual:</b> 294&nbsp;pp., spiral bound, paperback, 8&half;”&nbsp;x&nbsp;11”.<br />
+				<b>CDs:</b> CD1:&nbsp;Music for dances 1-16; CD2:&nbsp;Music for dances 17-31.<br />
+				The DVD and CDs are sleeve-mounted in the book.
+				<p style="clear:both"></p>
+				Educational materials in folk dance, including a video (DVD), organized into beginning, intermediate, and advanced levels; two CDs of the music for rehearsal and performance purposes; and an instructional manual with detailed directions for the dances, information on cultural and historical background, musical scores, pronunciation guide, glossary, and bibliography.
+				<h4><button type="button" onclick="toggleAccordion('toc1')" class="w3-btn w3-white w3-left-align">
+				<i id="toc1Title" class="fa fa-caret-square-o-right"></i>&nbsp;Contents of the Book, Volumes&nbsp;I,II,III</button></h4>
+				<div id="toc1" class="w3-container w3-hide">
+					<b>Preface<p></p>Acknowledgments<p></p>Introduction<p></p>Notes on the Directions for the Dances</b>
+					<h3>Volume I: Beginning Dances for Children Ages 5-13 & Adults</h3>
+					<ol>
+						<li>Čížeček (The Little Siskin), Bohemia</li>
+						<li>Kolečko mlýnský (The Little Mill Wheel), central Bohemia</li>
+						<li>Volky (The Little Oxen), northeast Moravia</li>
+						<li>Jarní hry (Spring Dance Games), Bohemia and Moravia</li>
+						<li>Na Heličku (The Helichka Games), south central Bohemia</li>
+						<li>Ráček (The Small Crayfish), northeast Bohemia</li>
+						<li>Ovečky (The Little Sheep), southwestern Bohemia</li>
+						<li>Zaječí (The Hare Dance), east central Moravia</li>
+						<li>Ševcovskí (The Cobbler’s Dance), northeast Bohemia</li>
+						<li>Šijeme vrecia (Sewing Satchels), north central Slovakia</li>
+					</ol>
+					<h3>Volume II: Intermediate Dances for Young People Ages 14-16 and Adults</h3>
+					<ol>
+						<li>Čerešničky (The Cherries), in the style of southeast Moravia
+						<li>Věnec (The Wreath), south central Bohemia
+						<li>Boleslav (The Beautiful Town of Boleslav), northeast Bohemia
+						<li>Černá vlna (Black Fleece), northeast Moravia
+						<li>Podšable (The Sword Dance), east Moravia
+						<li>Mazurka (The Mazurka), north Bohemia
+						<li>Zbujan (The Zbujan), northeast Moravia
+						<li>Dvojpolka (The Heel and Toe Polka), northeast Bohemia
+						<li>Čardáš (The Czardas), Slovakia
+						<li>Kalamajka a Maděra (The Kalamayka and Madera), North Bohemia and Moravia
+					</ol>
+					<h3>Volume III: Advanced Dances for Young People Ages 17+ and Adults</h3>
+					<ol>
+						<li>Lašský mazur (The Lachian Mazur), northeast Moravia
+						<li>Česká polka (The Czech Polka), northeast Bohemia
+						<li>Kopaničářský čardáš (The Kopanice Czardas), east Moravia
+						<li>Heľpa (The Pretty Town of Helpa), central Slovakia
+						<li>Troják (The Threesome Dance), northeast Bohemia
+						<li>Čeladenský (The Čeladenský), northeast Moravia
+						<li>Sýkorka (The Titmouse), southwest Bohemia
+						<li>Karičky (A Suite of Round Dances), east Slovakia
+						<li>Odzemok (The Odzemok Dance), north central Slovakia
+						<li>Lašské kolo (The Lachian Round), northeast Moravia
+						<li>Furiant (The Hotheaded Show-off), Bohemia
+					</ol>
+					<b>Pronunciation Guide<p></p>Glossary<p></p>Bibliography<p></p>Authors, Directors, Performers<p></p>Map of Dance Locations<p></p>DVD and CD Contents<p></p>The book is spiral bound, paperback, 294 pages, and 8&half;” by 11”</b>
+					<hr style="display:block;height:1px;border-top:1px solid #c82525;margin:1em 0;padding:0" />
+					<h3>The DVD and CDs</h3>
+					The DVD contains an introduction and performances of the 31 dances. It is two hours in length. Because it may be difficult to see some of the more complicated steps with the costumes, some of the dances are demonstrated again in rehearsal dress. For rehearsal and performance purposes, the music is contained on two CDs. The first 16 dances are on one CD; the other 15 dances are on the other CD. The timing for each dance is given in the DVD and CD Contents.
+				</div>
+			</div>
+			<div>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+		<div class="w3-container w3-cell w3-cell-top w3-white w3-padding-16">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+		</div>
+	</div>
+</header>
+
+<!-- page text for medium screens -->
+<header class="w3-container w3-black w3-hide-large w3-hide-small" style="margin-left:250px;padding:0px">
+	<h1 class="w3-xlarge w3-black w3-padding-large">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances, Beginning through Advanced</h1>
+	<div class="w3-container w3-white">
+		<div class="w3-container w3-white w3-border-bottom w3-border-black">
+			<h4>The Golden Gate Is Open: 31 Folk Dances from the Czech and Slovak Republics for Children and Adults, Vols. I, II, III</h4>
+			<div>
+				<img src="images/bookComplete.jpg" style="padding-right:24px;padding-bottom:16px;width:50%" class="w3-left">
+				<b>Item #0001<p></p>$75.00</b><p></p>Domestic shipping: $4.50 (media rate)<br />
+				<i>Overseas shipping: $25.00</i><p></p>
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="V5JCV97X2GM9C">
+					<table>
+						<tr><td><input type="hidden" name="on0" value="Price including shipping">Price including shipping</td></tr>
+						<tr><td><select name="os0">
+							<option value="Ship to US address">Ship to US address $79.50 USD</option>
+							<option value="Overseas shipping">Overseas shipping $100.00 USD</option>
+						</select> </td></tr>
+					</table>
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<span class="w3-xlarge">Specifications:</span><br />
+				<b>DVD:</b> length—2&nbsp;hours. Shows all dance movements.<br />
+				<b>Manual:</b> 294&nbsp;pp., spiral bound, paperback, 8&half;”&nbsp;x&nbsp;11”.<br />
+				<b>CDs:</b> CD1:&nbsp;Music for dances 1-16; CD2:&nbsp;Music for dances 17-31.<br />
+				The DVD and CDs are sleeve-mounted in the book.
+				<p style="clear:both"></p>
+				Educational materials in folk dance, including a video (DVD), organized into beginning, intermediate, and advanced levels; two CDs of the music for rehearsal and performance purposes; and an instructional manual with detailed directions for the dances, information on cultural and historical background, musical scores, pronunciation guide, glossary, and bibliography.
+				<h4><button type="button" onclick="toggleAccordion('toc2')" class="w3-btn w3-white w3-left-align">
+				<i id="toc2Title" class="fa fa-caret-square-o-right"></i>&nbsp;Contents of the Book, Volumes&nbsp;I,II,III</button></h4>
+				<div id="toc2" class="w3-container w3-hide">
+					<b>Preface<p></p>Acknowledgments<p></p>Introduction<p></p>Notes on the Directions for the Dances</b>
+					<h3>Volume I: Beginning Dances for Children Ages 5-13 & Adults</h3>
+					<ol>
+						<li>Čížeček (The Little Siskin), Bohemia</li>
+						<li>Kolečko mlýnský (The Little Mill Wheel), central Bohemia</li>
+						<li>Volky (The Little Oxen), northeast Moravia</li>
+						<li>Jarní hry (Spring Dance Games), Bohemia and Moravia</li>
+						<li>Na Heličku (The Helichka Games), south central Bohemia</li>
+						<li>Ráček (The Small Crayfish), northeast Bohemia</li>
+						<li>Ovečky (The Little Sheep), southwestern Bohemia</li>
+						<li>Zaječí (The Hare Dance), east central Moravia</li>
+						<li>Ševcovskí (The Cobbler’s Dance), northeast Bohemia</li>
+						<li>Šijeme vrecia (Sewing Satchels), north central Slovakia</li>
+					</ol>
+					<h3>Volume II: Intermediate Dances for Young People Ages 14-16 and Adults</h3>
+					<ol>
+						<li>Čerešničky (The Cherries), in the style of southeast Moravia
+						<li>Věnec (The Wreath), south central Bohemia
+						<li>Boleslav (The Beautiful Town of Boleslav), northeast Bohemia
+						<li>Černá vlna (Black Fleece), northeast Moravia
+						<li>Podšable (The Sword Dance), east Moravia
+						<li>Mazurka (The Mazurka), north Bohemia
+						<li>Zbujan (The Zbujan), northeast Moravia
+						<li>Dvojpolka (The Heel and Toe Polka), northeast Bohemia
+						<li>Čardáš (The Czardas), Slovakia
+						<li>Kalamajka a Maděra (The Kalamayka and Madera), North Bohemia and Moravia
+					</ol>
+					<h3>Volume III: Advanced Dances for Young People Ages 17+ and Adults</h3>
+					<ol>
+						<li>Lašský mazur (The Lachian Mazur), northeast Moravia
+						<li>Česká polka (The Czech Polka), northeast Bohemia
+						<li>Kopaničářský čardáš (The Kopanice Czardas), east Moravia
+						<li>Heľpa (The Pretty Town of Helpa), central Slovakia
+						<li>Troják (The Threesome Dance), northeast Bohemia
+						<li>Čeladenský (The Čeladenský), northeast Moravia
+						<li>Sýkorka (The Titmouse), southwest Bohemia
+						<li>Karičky (A Suite of Round Dances), east Slovakia
+						<li>Odzemok (The Odzemok Dance), north central Slovakia
+						<li>Lašské kolo (The Lachian Round), northeast Moravia
+						<li>Furiant (The Hotheaded Show-off), Bohemia
+					</ol>
+					<b>Pronunciation Guide<p></p>Glossary<p></p>Bibliography<p></p>Authors, Directors, Performers<p></p>Map of Dance Locations<p></p>DVD and CD Contents<p></p>The book is spiral bound, paperback, 294 pages, and 8&half;” by 11”</b>
+					<hr style="display:block;height:1px;border-top:1px solid #c82525;margin:1em 0;padding:0" />
+					<h3>The DVD and CDs</h3>
+					The DVD contains an introduction and performances of the 31 dances. It is two hours in length. Because it may be difficult to see some of the more complicated steps with the costumes, some of the dances are demonstrated again in rehearsal dress. For rehearsal and performance purposes, the music is contained on two CDs. The first 16 dances are on one CD; the other 15 dances are on the other CD. The timing for each dance is given in the DVD and CD Contents.
+				</div>
+				<br />&nbsp;
+			</div>
+		</div>
+		<div class="w3-container w3-center w3-padding-24 w3-white">
+			<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+		</div>
+	</div>
+</header>
+
+<!-- page text for small screens -->
+<header class="w3-container w3-white w3-hide-large w3-hide-medium" style="padding: 64px 0px">
+	<h1 class="w3-xlarge w3-padding">Vol&nbsp;I,II,III: 31&nbsp;Folk Dances, Beginning through Advanced</h1>
+	<div class="w3-container w3-white w3-padding w3-border-bottom w3-border-black">
+		<h4>The Golden Gate Is Open: 31 Folk Dances from the Czech and Slovak Republics for Children and Adults, Vols. I, II, III</h4>
+		<div>
+			<img src="images/bookComplete.jpg" style="padding-right:12px;padding-bottom:16px;width:50%" class="w3-left">
+			<b>Item #0001<p></p>$75.00</b><p></p>Domestic shipping: $4.50 (media rate)<br />
+			<i>Overseas shipping: $25.00</i><p></p>
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="V5JCV97X2GM9C">
+				<table>
+					<tr><td><input type="hidden" name="on0" value="Price including shipping">Price including shipping</td></tr>
+					<tr><td><select name="os0">
+						<option value="Ship to US address">Ship to US address $79.50 USD</option>
+						<option value="Overseas shipping">Overseas shipping $100.00 USD</option>
+					</select> </td></tr>
+				</table>
+				<input type="hidden" name="currency_code" value="USD">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<span class="w3-xlarge">Specifications:</span><br />
+			<b>DVD:</b> length—2&nbsp;hours. Shows all dance movements.<br />
+			<b>Manual:</b> 294&nbsp;pp., spiral bound, paperback, 8&half;”&nbsp;x&nbsp;11”.<br />
+			<b>CDs:</b> CD1:&nbsp;Music for dances 1-16; CD2:&nbsp;Music for dances 17-31.<br />
+			The DVD and CDs are sleeve-mounted in the book.
+			<p style="clear:both"></p>
+			Educational materials in folk dance, including a video (DVD), organized into beginning, intermediate, and advanced levels; two CDs of the music for rehearsal and performance purposes; and an instructional manual with detailed directions for the dances, information on cultural and historical background, musical scores, pronunciation guide, glossary, and bibliography.
+			<h4><button type="button" onclick="toggleAccordion('toc3')" class="w3-btn w3-white w3-left-align">
+			<i id="toc3Title" class="fa fa-caret-square-o-right"></i>&nbsp;Contents of the Book, Volumes&nbsp;I,II,III</button></h4>
+			<div id="toc3" class="w3-container w3-hide">
+				<b>Preface<p></p>Acknowledgments<p></p>Introduction<p></p>Notes on the Directions for the Dances</b>
+				<h3>Volume I: Beginning Dances for Children Ages 5-13 & Adults</h3>
+				<ol>
+					<li>Čížeček (The Little Siskin), Bohemia</li>
+					<li>Kolečko mlýnský (The Little Mill Wheel), central Bohemia</li>
+					<li>Volky (The Little Oxen), northeast Moravia</li>
+					<li>Jarní hry (Spring Dance Games), Bohemia and Moravia</li>
+					<li>Na Heličku (The Helichka Games), south central Bohemia</li>
+					<li>Ráček (The Small Crayfish), northeast Bohemia</li>
+					<li>Ovečky (The Little Sheep), southwestern Bohemia</li>
+					<li>Zaječí (The Hare Dance), east central Moravia</li>
+					<li>Ševcovskí (The Cobbler’s Dance), northeast Bohemia</li>
+					<li>Šijeme vrecia (Sewing Satchels), north central Slovakia</li>
+				</ol>
+				<h3>Volume II: Intermediate Dances for Young People Ages 14-16 and Adults</h3>
+				<ol>
+					<li>Čerešničky (The Cherries), in the style of southeast Moravia
+					<li>Věnec (The Wreath), south central Bohemia
+					<li>Boleslav (The Beautiful Town of Boleslav), northeast Bohemia
+					<li>Černá vlna (Black Fleece), northeast Moravia
+					<li>Podšable (The Sword Dance), east Moravia
+					<li>Mazurka (The Mazurka), north Bohemia
+					<li>Zbujan (The Zbujan), northeast Moravia
+					<li>Dvojpolka (The Heel and Toe Polka), northeast Bohemia
+					<li>Čardáš (The Czardas), Slovakia
+					<li>Kalamajka a Maděra (The Kalamayka and Madera), North Bohemia and Moravia
+				</ol>
+				<h3>Volume III: Advanced Dances for Young People Ages 17+ and Adults</h3>
+				<ol>
+					<li>Lašský mazur (The Lachian Mazur), northeast Moravia
+					<li>Česká polka (The Czech Polka), northeast Bohemia
+					<li>Kopaničářský čardáš (The Kopanice Czardas), east Moravia
+					<li>Heľpa (The Pretty Town of Helpa), central Slovakia
+					<li>Troják (The Threesome Dance), northeast Bohemia
+					<li>Čeladenský (The Čeladenský), northeast Moravia
+					<li>Sýkorka (The Titmouse), southwest Bohemia
+					<li>Karičky (A Suite of Round Dances), east Slovakia
+					<li>Odzemok (The Odzemok Dance), north central Slovakia
+					<li>Lašské kolo (The Lachian Round), northeast Moravia
+					<li>Furiant (The Hotheaded Show-off), Bohemia
+				</ol>
+				<b>Pronunciation Guide<p></p>Glossary<p></p>Bibliography<p></p>Authors, Directors, Performers<p></p>Map of Dance Locations<p></p>DVD and CD Contents<p></p>The book is spiral bound, paperback, 294 pages, and 8&half;” by 11”</b>
+				<hr style="display:block;height:1px;border-top:1px solid #c82525;margin:1em 0;padding:0" />
+				<h3>The DVD and CDs</h3>
+				The DVD contains an introduction and performances of the 31 dances. It is two hours in length. Because it may be difficult to see some of the more complicated steps with the costumes, some of the dances are demonstrated again in rehearsal dress. For rehearsal and performance purposes, the music is contained on two CDs. The first 16 dances are on one CD; the other 15 dances are on the other CD. The timing for each dance is given in the DVD and CD Contents.
+			</div>
+		</div>
+		<br />&nbsp;
+	</div>
+	<div class="w3-container w3-center w3-white" style="padding-top:36px">
+		<a href="bookVol1.htm" class="w3-button w3-margin w3-tiny w3-card-4 w3-white w3-hover-red w3-center w3-sans-serif w3-border w3-round-large">Vol&nbsp;I: 10&nbsp;Beginning Folk Dances<br /><img src="images/slidesVol1.jpg" width="200px" /></a>
+		<div class="w3-center w3-padding-small w3-tiny" style="line-height:-0.4">&copy;2021 Edward J.P. O'Connor<br /> All Rights Reserved</div>
+	</div>
+</header>
+</body>
+</html>
